@@ -52,9 +52,39 @@
               </ul>
             </div>
           </li>
-          <li><a href="login.html" target="_parent">Log In</a></li>
+          <li><button class = "loginbtn" onclick = "document.getElementById('login-form').style.display='block'" style = width:auto;>Login</button></li>
         </ul>
        </div>
+
+       <div id = "login-form" class = "login-page">
+        <div class = "form-box">
+            <div class = "button-box">
+                <div id="btn"></div>
+                <button type="button" onclick="login()" class="toggle-btn">Login</button>
+<button type="button" onclick="register()" class="toggle-btn">Register</button>
+
+            </div>
+        <form action="" id = "login" class = "input-box-login">
+            <input type="email" class = "input-field" placeholder="Email Id" required>
+            <input type="password" class="input-field" placeholder="Enter password" required>
+            <label for="">Remember password</label>
+            <input type="checkbox" class="checkbox" id = "remember">
+            <button type = "submit" class = "submit-btn">Log in</button>
+        </form>   
+        
+        <form action="" id = "register" class = "input-group-register">
+            <input type="text" class = "input-field" placeholder="First Nmae" required>
+            <input type="text" class = "input-field" placeholder="Last Name" required>
+            <input type="email" class = "input-field" placeholder="Email Id" required>
+            <input type="password" class="input-field" placeholder="Enter password" required>
+            <input type="checkbox" class="checkbox"><span>I agree to the terms and conditions</span>
+            <button type = "submit" class = "submit-btn">Register</button>
+        </form>
+    </div>
+   </div>
+ </ul>
+</div>
+
     </nav>
     <div class="Body_1"> 
       <h1 class="heading">Welcome to Book Reading Platform</h1>
@@ -103,6 +133,45 @@
      </div>   
   </div> 
   
-  
+  <script>
+    var x = document.getElementById('login');
+var y = document.getElementById('register');
+var z = document.getElementById('btn');
+
+function register() {
+    x.style.left = '-400px';
+    y.style.left = '50px';
+    z.style.left = '110px';
+
+    // Hide the login form
+    document.getElementById('login').style.display = 'none';
+    // Show the register form
+    document.getElementById('register').style.display = 'block';
+}
+
+function login() {
+    x.style.left = '5px';
+    y.style.left = '450px';
+    z.style.left = '0px';
+
+    // Hide the register form
+    document.getElementById('register').style.display = 'none';
+    // Show the login form
+    document.getElementById('login').style.display = 'block';
+}
+
+
+  </script>
+
+  <script>
+    var modal = document.getElementById('login-form');
+    window.onclick = function(event)
+    {
+      if (event.target == modal)
+      {
+        modal.style.display = "none";
+      }
+    }
+  </script>
     </body>
   </html>
