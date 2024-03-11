@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Category Slider</title>
+<style>
+  #container {
+    width: 300px;
+    height: 200px;
+    background-color: lightgray;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .category-image {
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    margin: 5px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+  <div id="container">
+    <!-- Content goes here -->
+    <p>This is the default content</p>
+  </div>
+  
+  <img src="horror.jpg" alt="Horror" class="category-image" onclick="showCategory('horror')">
+  <img src="comedy.jpg" alt="Comedy" class="category-image" onclick="showCategory('comedy')">
+  <!-- Add more images for other categories -->
+  
+  <script>
+    function showCategory(category) {
+      var container = document.getElementById('container');
+      // Hide the container with a sliding animation
+      container.style.transform = 'translateX(-100%)'; // Example slide animation
+      
+      // You can load content based on the category here
+      // For simplicity, let's just change the content to reflect the category
+      setTimeout(function() {
+        switch (category) {
+          case 'horror':
+            container.innerHTML = '<p>Horror movies</p>';
+            break;
+          case 'comedy':
+            container.innerHTML = '<p>Comedy movies</p>';
+            break;
+          // Add cases for other categories
+          default:
+            container.innerHTML = '<p>No content available for this category</p>';
+        }
+        
+        // Show the container again with a sliding animation
+        container.style.transform = 'translateX(0)';
+      }, 300); // Delay should match the transition duration
+    }
+  </script>
+</body>
+</html>
