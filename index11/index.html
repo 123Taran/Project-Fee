@@ -129,41 +129,30 @@
         
             <div class="Body_2"> 
               <div class="wrapper">
-              <div class="card">
-                <img src="./assets/img/love it or lose it.jpg">
-                <div class="info">
-                  <h1>Reading</h1>
-                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt error explicabo amet ea facilis debitis!</p>
-                  <a href="#" class="Btn">Read More</a>
+               <a href="#" onclick="openBookPopup('./Rich Dad’s Guide to Investing - PDF Room.pdf')">
+                  <img src="./assets/img/Rich dad.png" alt="Book 1 Title">
+                </a>
+                
+                <a href="#" onclick="openBookPopup('./DC Marvel.pdf')">
+                  <img src="./assets/img/Spider Man.png" alt="Book 2 Title">
+                </a>
+                
+                <a href="#" onclick="openBookPopup('./Tactics Time! 1001 Chess Tactics from the Games of Everyday Chess Players - PDF Room.pdf')">
+                  <img src="./assets/img/tactics (1).png" alt="Book 3 Title">
+                </a>
+                
+                <a href="#" onclick="openBookPopup('./Hacking For Beginnerspdf - PDF Room.pdf')">
+                  <img src="./assets/img/hacking.png" alt="Book 4 Title">
+                </a>
+                
+                <div id="popupContainer" class="popupContainer">
+                  <div class="pdfViewer">
+                    <iframe id="pdfFrame" src="" frameborder="0"></iframe>
+                    <span class="closeButton" onclick="closePopup()">&times;</span>
+                  </div>
                 </div>
-              </div>
-        
-              <div class="card">
-                <img src="./assets/img/Love of My Life.jpg">
-                <div class="info">
-                  <h1>Reading</h1>
-                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt error explicabo amet ea facilis debitis!</p>
-                  <a href="#" class="Btn">Read More</a>
-                </div>
-              </div>
-        
-              <div class="card">
-                <img src="./assets/img/insel.jpeg">
-                <div class="info">
-                  <h1>Reading</h1>
-                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt error explicabo amet ea facilis debitis!</p>
-                  <a href="#" class="Btn">Read More</a>
-                </div>
-              </div>
 
-              <div class="card">
-                <img src="./assets/img/Story about you and me.jpg">
-                <div class="info">
-                  <h1>Reading</h1>
-                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt error explicabo amet ea facilis debitis!</p>
-                  <a href="#" class="Btn">Read More</a>
-                </div>
-              </div>
+              
 
          </div>
       </div>

@@ -38,9 +38,16 @@ loginBtn.addEventListener('click', () =>{
    login.classList.add('show-login')
 })
 
-/* Login hidden */
-loginClose.addEventListener('click', () =>{
-   login.classList.remove('show-login')
-})
-
-
+function openBookPopup(pdfPath) {
+   var popupContainer = document.getElementById("popupContainer");
+   var pdfFrame = document.getElementById("pdfFrame");
+   pdfFrame.src = pdfPath;
+   popupContainer.style.display = "block";
+ }
+ 
+ function closePopup() {
+   var popupContainer = document.getElementById("popupContainer");
+   var pdfFrame = document.getElementById("pdfFrame");
+   pdfFrame.src = "";
+   popupContainer.style.display = "none";
+ }
